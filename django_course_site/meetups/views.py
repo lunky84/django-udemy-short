@@ -4,6 +4,11 @@ from django.http import HttpResponse
 from .models import Meetup, Participant
 from .forms import RegistrationForm
 
+from meetups.models import Location
+from rest_framework import permissions, viewsets
+
+from .serializers import LocationSerializer
+
 # Create your views here.
 
 
@@ -45,3 +50,6 @@ def confirm_registration(request, meetup_slug):
     return render(request, 'meetups/registration-success.html', {
         'organizer_email': meetup.organizer_email
     })
+class LocationViewSet(viewsets.ModelViewSet):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer

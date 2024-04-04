@@ -3,7 +3,7 @@
 
 FROM python:3.10.6-slim-buster
 
-WORKDIR /app
+WORKDIR /workspace
 
 COPY requirements.txt requirements.txt
 

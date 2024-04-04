@@ -1,6 +1,18 @@
 # django-udemy-short
 
-### Docker setup
+### VSCode Devcontainer
+
+```
+devcontainer open
+```
+
+### Using Docker Compose
+
+```
+docker compose up
+```
+
+### Using the Dockerfile
 
 Generate image
 

@@ -1,5 +1,41 @@
 # django-udemy-short
 
+### Docker setup
+
+Generate image
+
+```
+docker build -t meetups_image .
+```
+
+Run the container
+
+```
+docker run -d -p 8042:8041 --name meetups_container meetups_image
+```
+
+To view the site go to [http://localhost:8042/meetups/](http://localhost:8042/meetups/)
+
+Administer the site via [http://localhost:8042/admin/](http://localhost:8042/admin/)
+
+Example API endpoint [http://localhost:8042/api/locations/](http://localhost:8042/api/locations/)
+
+### API responses
+
+Example curl command
+
+```
+curl -v http://localhost:8042/api/locations/
+```
+
+Example httpie command
+
+```
+http GET http://localhost:8042/api/locations/
+```
+
+### Venv commands
+
 Start venv virtual environment
 
 ```
@@ -24,9 +60,11 @@ Run server
 python manage.py runserver
 ```
 
-To view the site go to [http://127.0.0.1:8024/meetups/](http://127.0.0.1:8024/meetups/)
+Close virtual environment
 
-Administer the site via [http://127.0.0.1:8024/admin/](http://127.0.0.1:8024/admin/)
+```
+deactivate
+```
 
 ### Useful Commands
 

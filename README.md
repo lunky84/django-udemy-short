@@ -6,6 +6,12 @@ Start venv virtual environment
 source myworld/bin/activate
 ```
 
+Intall dependencies
+
+```
+pip install -r requirements.txt
+```
+
 Change to project directory
 
 ```
@@ -24,8 +30,14 @@ Administer the site via [http://127.0.0.1:8024/admin/](http://127.0.0.1:8024/adm
 
 ### Useful Commands
 
-##### See which python packages are installed
+See which python packages are installed
 
 ```
 pip list
+```
+
+Generate a requirements.txt file containing the currently installed python packages
+
+```
+pip freeze > requirements.txt
 ```

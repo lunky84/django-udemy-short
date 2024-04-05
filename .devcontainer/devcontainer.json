@@ -1,5 +1,5 @@
 {
-	"name": "Existing Dockerfile",
+	"name": "Meetups",
 	"dockerComposeFile": "../docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace"

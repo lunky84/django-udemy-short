@@ -32,7 +32,11 @@ Administer the site via [http://localhost:8042/admin/](http://localhost:8042/adm
 
 Example API endpoint [http://localhost:8042/api/locations/](http://localhost:8042/api/locations/)
 
-### API responses
+
+
+## API requests
+
+### Public endpoints
 
 Example curl command
 
@@ -44,6 +48,25 @@ Example httpie command
 
 ```
 http GET http://localhost:8042/api/locations/
+```
+
+### Authenticated / Private endpoints
+Requests to obtain authorization token
+
+```
+curl -XPOST -F 'username=**username**' -F 'password=**password**' http://localhost:8042/api/api-token-auth/
+```
+
+```
+http post http://localhost:8042/api/api-token-auth/ username=**username** password=**password**
+```
+Requests to access data
+```
+curl -X GET -H 'Authorization: Token **token**' http://localhost:8042/api/meetups/
+```
+
+```
+http http://localhost:8042/api/meetups/ 'Authorization: Token **token**'
 ```
 
 ### Venv commands
